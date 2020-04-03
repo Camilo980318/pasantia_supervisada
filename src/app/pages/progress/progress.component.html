@@ -1,1 +1,55 @@
-<p>progress works!</p>
+<!-- Metemos todo el contenido en na tarjeta -->
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+
+                <!-- Inicio del contenido de la tarjeta -->
+
+                <h4 class="card-title"> Barra de progreso </h4>
+
+                <!-- Barra 1 -->
+                <div class="progress">
+                    <!-- Ponemos la variable de angular entre []-->
+                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" [attr.ariaValuenow]="progresoAzul" aria-valuemin="0" aria-valuemax="100" [style.width]="progresoAzul + '%'"></div>
+                </div>
+
+                <br>
+
+                <!-- Barra 2 (cambiando de color) -->
+                <div class="progress">
+                    <!-- Ponemos la variable de angular entre []-->
+                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning" role="progressbar" [attr.ariaValuenow]="progresoAmarillo" aria-valuemin="0" aria-valuemax="100" [style.width]="progresoAmarillo + '%'"></div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Contenido en tarejtas pequeñas -->
+<div class="row">
+
+    <div class="col-6">
+        <div class="card">
+            <div class="card-body">
+
+                <!-- pasamos el componente incrementador, con los parámetros (variable de ts) -->
+                <app-incrementador (cambioValor)="progresoAzul = $event" titulo="Incrementador barra azul" [progreso]="progresoAzul"></app-incrementador>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="col-6">
+        <div class="card">
+            <div class="card-body">
+                <!-- pasamos el componente incrementador, con los parámetros (variable de ts) -->
+                <app-incrementador (cambioValor)="progresoAmarillo = $event" titulo="Incrementador barra amarilla" [progreso]="progresoAmarillo"></app-incrementador>
+            </div>
+        </div>
+    </div>
+
+</div>

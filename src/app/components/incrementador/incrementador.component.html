@@ -1,0 +1,27 @@
+<h3>{{leyenda}}</h3>
+
+<!-- Form -->
+<div class="input-group mb-3">
+
+    <div class="input-group-prepend">
+        <!-- Para programar los botones, creamos el evento cambiarValor, el
+                cual va a recibir un valor -->
+        <button class="btn btn btn-danger" (click)="cambiarValor(-5)" type="button" id="button-addon1">
+            <i class="fa fa-minus"></i>
+        </button>
+    </div>
+
+    <!-- Para utilizar el formulario, tenemos que ponerle un nombre y utilizar 
+            el ngModel, y para capturar el cambio del input, ponemos el 
+            ngModelChange, también lo referenciamos al viewchild con # -->
+    <input type="number" #txtProgreso class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1" name="progreso" [(ngModel)]="progreso" (ngModelChange)="onChange($event)" min="1" max="100">
+
+    <div class="input-group-append">
+        <!-- Para programar los botones, creamos el evento cambiarValor, el
+                cual va a recibir un valor -->
+        <button class="btn btn-danger" (click)="cambiarValor(+5)" type="button" id="button-addon2">
+            <i class="fa fa-plus"></i>
+        </button>
+    </div>
+</div>
+<!--End Form-->

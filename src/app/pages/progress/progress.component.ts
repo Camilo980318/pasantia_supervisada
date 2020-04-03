@@ -7,9 +7,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProgressComponent implements OnInit {
 
+  // Declaramos una variable progreso que sera el valor inicial de la barra
+  progresoAzul = 30;
+  progresoAmarillo = 40;
+
   constructor() { }
 
   ngOnInit() {
   }
+
+  /*
+  Si utilizaramos la función, sería así. Pero en este caso, vamos a utilizar la asignación 
+  directa.
+
+
+  actualizaValor( evnt:number ) {
+      this.progresoAzul = event;
+  }
+
+
+  */
 
 }

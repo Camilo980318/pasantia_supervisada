@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 // Rutas
 import { PAGES_ROUTES } from './pages.routes';
@@ -11,6 +12,13 @@ import { Graficas1Component } from './graficas1/graficas1.component';
 import { ProgressComponent } from './progress/progress.component';
 import { SharedModule } from '../shared/shared.module';
 
+// Temporalmente importamos los forms Module aquí (Después, lo cambiamos de lugar)
+import { IncrementadorComponent } from '../components/incrementador/incrementador.component';
+import { GraficoDonaComponent } from '../components/grafico-dona/grafico-dona.component';
+
+
+// ng2-charts
+import { ChartsModule } from 'ng2-charts';
 
 
 @NgModule({
@@ -19,7 +27,9 @@ import { SharedModule } from '../shared/shared.module';
         PagesComponent,
         DashboardComponent,
         Graficas1Component,
-        ProgressComponent
+        ProgressComponent,
+        IncrementadorComponent,
+        GraficoDonaComponent
     ],
     exports: [
         // Para que los otras páginas puedan utilizar los componentes
@@ -31,7 +41,9 @@ import { SharedModule } from '../shared/shared.module';
     imports: [
         // Recibimos los componentes de la carpeta shared
         SharedModule,
-        PAGES_ROUTES
+        PAGES_ROUTES,
+        FormsModule,
+        ChartsModule
     ]
 })
 

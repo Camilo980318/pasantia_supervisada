@@ -1,1 +1,56 @@
-<p>graficas1 works!</p>
+<!-- Contenido en tarejtas pequeñas -->
+<!-- Fila 1 -->
+<div class="row">
+
+    <div class="col-6">
+        <div class="card">
+            <div class="card-body">
+
+                <!-- Enviamos la data json del padre al hijo que recibe los inputs -->
+                <app-grafico-dona [labels]="graficos.grafico1.labels" [data]="graficos.grafico1.data" [titulo]="graficos.grafico1.leyenda"></app-grafico-dona>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="col-6">
+        <div class="card">
+            <div class="card-body">
+
+                <!-- Enviamos la data json del padre al hijo que recibe los inputs -->
+                <app-grafico-dona [labels]="graficos.grafico2.labels" [data]="graficos.grafico2.data" [titulo]="graficos.grafico2.leyenda"></app-grafico-dona>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<!-- Fila 2 -->
+<div class="row">
+
+    <div class="col-6">
+        <div class="card">
+            <div class="card-body">
+
+                <!-- Enviamos la data json del padre al hijo que recibe los inputs -->
+                <app-grafico-dona [labels]="graficos.grafico3.labels" [data]="graficos.grafico3.data" [titulo]="graficos.grafico3.leyenda"></app-grafico-dona>
+
+
+            </div>
+        </div>
+    </div>
+
+    <div class="col-6">
+        <div class="card">
+            <div class="card-body">
+
+                <!-- Enviamos la data json del padre al hijo que recibe los inputs -->
+                <app-grafico-dona [labels]="graficos.grafico4.labels" [data]="graficos.grafico4.data" [titulo]="graficos.grafico4.leyenda"></app-grafico-dona>
+
+            </div>
+        </div>
+    </div>
+
+</div>
