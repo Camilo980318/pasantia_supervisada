@@ -1,1 +1,5 @@
-/* You can add global styles to this file, and also import other style files */
+/* Para poner el cursor diferente en los botones para escoger el tema */
+
+#themecolors a {
+    cursor: pointer;
+}

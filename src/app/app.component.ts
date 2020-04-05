@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { SettingsService } from './services/service.index';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'pasantia-dark';
+
+  // Inyectamos el servicio de los ajustes para que apenas inicie el app, se cargue el
+  // cargarAjustes()
+  constructor( public AjustesServices: SettingsService ) {
+
+  }
+
 }

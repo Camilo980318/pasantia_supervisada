@@ -11,6 +11,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { Graficas1Component } from './graficas1/graficas1.component';
 import { ProgressComponent } from './progress/progress.component';
 import { SharedModule } from '../shared/shared.module';
+import { AcountSettingsComponent } from './acount-settings/acount-settings.component';
 
 // Temporalmente importamos los forms Module aquí (Después, lo cambiamos de lugar)
 import { IncrementadorComponent } from '../components/incrementador/incrementador.component';
@@ -21,6 +22,7 @@ import { GraficoDonaComponent } from '../components/grafico-dona/grafico-dona.co
 import { ChartsModule } from 'ng2-charts';
 
 
+
 @NgModule({
     // Declaramos las páginas de la carpeta pages
     declarations: [
@@ -29,7 +31,8 @@ import { ChartsModule } from 'ng2-charts';
         Graficas1Component,
         ProgressComponent,
         IncrementadorComponent,
-        GraficoDonaComponent
+        GraficoDonaComponent,
+        AcountSettingsComponent
     ],
     exports: [
         // Para que los otras páginas puedan utilizar los componentes
