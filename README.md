@@ -1,4 +1,6 @@
-# PasantiaDark
+# PasantiaDark - Boceto
+
+Boceto del Proyecto para la gestión de pasantías de la facultad de ingeniería de la Universidad Surcolombiana
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.25.
 
